@@ -14,13 +14,13 @@
 <?php 
 
 function absolute_path($relativePath) {
-		$path = '';
-		// Strip all parent and this folder dots (.. and .)
-		$relParts = explode("/", $relativePath);
+	// Strip all parent and this folder dots (.. and .)
+	$relParts = explode("/", $relativePath);
 		foreach($relParts as $i => $part) {
 			if ($part == '.') {
 				$relParts[$i] = null;
 			}
+
 			if ($part == '..') {
 				$relParts[$i - 1] = null;
 				$relParts[$i] = null;
@@ -30,8 +30,7 @@ function absolute_path($relativePath) {
 		$relParts = array_filter($relParts);
 		// Reassemble string
 		return '/'.implode("/", $relParts);
+		// Strip all parent and this folder dots (.. and .)		
 }
-
 echo absolute_path('/root/home/test/.././');
-
 ?>
