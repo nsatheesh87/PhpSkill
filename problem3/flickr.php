@@ -1,9 +1,25 @@
 <?php
 require_once('abstractFlickr.php');
+/**
+* Flickr Abstract class
+* 
+* This is the parent abstract class for Flickr class 
+* 
+* @author Satheesh Narayanan <nsatheesh87@gmail.com>
+*
+**/
 class flickr extends abstractFlickr
 {
-	protected $response;
 
+	/**
+	* Call the abstract class method to fetch the json 
+	*
+	* @param $keywords
+	* @param @page
+	*
+	* @return string
+	*
+	**/
 	public function getResponse($keywords = 'butterfly', $currentPage = 1) {
 
 		$reponseData = $this->fetch($keywords, $currentPage);
