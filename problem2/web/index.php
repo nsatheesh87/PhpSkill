@@ -27,10 +27,10 @@ $app->get('/histogram/{username}', function($username) use($app) {
 
 
     $twitter_client->addSubscriber(new \Guzzle\Plugin\Oauth\OauthPlugin(array(
-        'consumer_key'  => 'eOkqyFnzENaOwZvOW4UYvBAAc',
-        'consumer_secret' => '8hqtSlFsEZDKMmYfV2HZqw3pYkDBDLZQdXelJFnLv9dCrhpyfR',
-        'token'       => '21214801-5njAdReR2YEpVWR2HFxg2WUobgAlvBKrMsEvpxLAK',
-        'token_secret'  => 'fxHZkrMseHzmpiTvoluHgsC5EeKlmMRLqz4F4J9y70gFg'
+        'consumer_key'  => '123',
+        'consumer_secret' => '123',
+        'token'       => '21214801',
+        'token_secret'  => '123'
     )));
 
     $request = $twitter_client->get('statuses/user_timeline.json');
